@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(139, 21, 21);
+    background: linear-gradient(to top right, #00cc99 0%, #ff66ff 100%);
+    /* background: rgb(0, 191, 255);  */
+}
+
+#app {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #222;
+}
+
+.header > * {
+    color: #eee;
+}
+
+.header-turn {
+    padding: 12px;
+}
+
+.header-status {
+    padding: 12px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header-restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: #eee;
+}
+
+.board-tile {
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-family: cursive;
+    color: #222;
+}
+
+.board-tile:hover {
+    background: #eee;
+}
+
+.board-tile-winner {
+    color: green;
+}
+
+
+.centre{
+    display: flex;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+	margin: auto;
+
+  }
+
+  .social {
+	font-family: cursive;
+	text-align: end;
+	padding: 0 4px;
+	height: 40px;
+	width: 40px;
+	/* background: #ffffff; */
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	transition: 0.3s;
+	color:rgb(17, 17, 17);
+  }
+  
+  .social:hover {
+	background: #b70096;
+	padding: 0 25px;
+  }
+
+
+  @media only screen and (max-width: 500px) {
+     *{
+        background:rgb(237, 172, 242);}
+        .centre{
+            margin-left:60px;
+            /* background-color: #222; */
+            
+        }
+        .centre a{
+            color: #00cc99;
+        }
+        .social{
+            font-size: large;
+        }
+  }
